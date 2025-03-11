@@ -89,6 +89,12 @@ section {
     margin-left: 10px; /* Adds margin on the left */
     margin-right: 10px; /* Ensures consistent spacing */
 }
+section ol{
+    padding-left: 2rem; /* Increased padding */
+}
+section ul{
+    padding-left: 2rem; /* Increased padding */
+}
 
 /* Ensuring CAPS and BSI Advising pages follow the same structure */
 main > div {
@@ -124,7 +130,7 @@ footer {
 }
 
 footer a {
-    color: #FFCB05;
+    color: #ff4f4f;
     text-decoration: none;
 }
 
