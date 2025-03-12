@@ -86,8 +86,8 @@ section {
     padding: 1.5rem; /* Increased padding */
     border-radius: 5px;
     box-shadow: 0px 2px 5px #0000001a;
-    margin-left: 10px; /* Adds margin on the left */
-    margin-right: 10px; /* Ensures consistent spacing */
+    margin-left: 1rem; /* Adds margin on the left */
+    margin-right: 1rem; /* Ensures consistent spacing */
 }
 section ol{
     padding-left: 2rem; /* Increased padding */
@@ -102,7 +102,7 @@ main > div {
     padding: 1.5rem;
     border-radius: 5px;
     box-shadow: 0px 2px 5px #0000001a;
-    margin: 10px;
+    margin: 1.5rem;
 }
 
 /* Grid for Physical and Mental Health Sections */
