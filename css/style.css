@@ -1,0 +1,178 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+/* Skip to Main Content */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    background: #0057b7;
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 1rem;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  header.dark-mode, footer.dark-mode, nav.dark-mode {
+    background-color: #1e1e1e;
+  }
+  a.dark-mode {
+    color: #bb86fc;
+  }
+body.dark-mode section, body.dark-mode main > div {
+    background: #333; /* dark grey */
+    color: #e0e0e0; /* adjust text color for contrast if needed */
+}
+body.dark-mode a {
+    color: #bb86fc; /* a light, contrasting purple */
+}
+
+body.dark-mode a:hover,
+body.dark-mode a:focus {
+    color: #d0aaff; /* slightly lighter on hover/focus for interactivity */
+}
+  
+/* Navigation */
+nav {
+    background-color: #00274C;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+nav ul li {
+    padding: 0.5rem;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+nav ul li a.active {
+    font-weight: bold;
+    border-bottom: 3px solid #ffff00;
+}
+
+/* Main Content */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+/* Sections & Divs */
+section, main > div {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    margin: 1rem;
+}
+section ol, section ul {
+    padding-left: 2rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+header img.logo {
+    width: 100px;
+    height: auto;
+    max-width: none;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #00274C;
+    color: #ffffff;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+footer a {
+    color: #ff4f4f;
+    text-decoration: underline;
+}
+
+
+
+@media (min-width: 768px) {
+    /* Change header layout: center logo and nav side-by-side */
+    /* header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    } */
+    
+    header img.logo {
+      width: 100px; /* or any desired size */
+      /* Remove margin auto because flex alignment takes care of it */
+    }
+    
+    /* Navigation: increase spacing and make it horizontal */
+    /* nav ul {
+      justify-content: flex-end;
+      gap: 2rem;
+    } */
+    
+    /* Main content: use a two-column grid if possible */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    
+    /* Sections: adjust padding and margins for desktop */
+    section, main > div {
+      padding: 2rem;
+      margin: 1rem 0;
+    }
+  }
+  

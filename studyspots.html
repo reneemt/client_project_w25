@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
     <title>Study Spots on Campus</title>
 </head>
 <body>
 
     <header>
         <a href="#main" class="skip-link">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
-        
+        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" width = 20%>
+        <div>
+            <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        </div>
+
     <nav>
         <ul>
             <li><a href = "index.html">Home</a></li>
@@ -22,7 +26,7 @@
     </nav>
     <h1>Study Spots to Check Out on Campus</h1>
     </header>
-    <main>
+    <main id="main">
         <div>
             <img src="images/SI_539_Portals_9V9A7999.jpg" alt ="A student studies in the Chemistry Building." width = 500>
             <p>Throughout your time at UMSI, you will have your fair share of work. However, sometimes you might not be able to go home everytime you need to get work done. There are coffee shops on campus, but maybe the low murmers aren't for you. Maybe it's full with friends and coffee chats. Maybe, there aren't outlets nearby! Have no fear, the University of Michigan campus has plenty of campus spots fit for your study needs! </p>
@@ -73,5 +77,20 @@
         </div>
     </main>
     <footer>
-        <p>Campus Study Spots</p>
-    </
+        <p>&copy; <span id="year"></span> University of Michigan | <a href="#">Privacy Policy</a></p>
+      </footer>
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            // Optionally, toggle dark-mode class for header, footer, nav if needed
+            document.querySelector('header').classList.toggle('dark-mode');
+            document.querySelector('footer').classList.toggle('dark-mode');
+            document.querySelector('nav').classList.toggle('dark-mode');
+  });
+      </script>      
+    
+</body>
+
+</html>
