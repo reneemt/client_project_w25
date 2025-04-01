@@ -11,6 +11,11 @@ body {
     line-height: 1.6;
     padding: 1rem;
 }
+h2{
+  font-size: 1.5rem;  /* Adjust this value as needed */
+  font-weight: bold;
+
+}
 
 /* Skip to Main Content */
 .skip-link {
@@ -174,5 +179,12 @@ footer a {
       padding: 2rem;
       margin: 1rem 0;
     }
+    main > div.full-width {
+        grid-column: 1 / -1;
+        text-align: center;
+      }
+      main > div.full-widthleft {
+        grid-column: 1 / -1;
+      }
   }
   
